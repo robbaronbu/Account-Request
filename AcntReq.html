@@ -1,0 +1,16 @@
+<div>
+<form action="/Request" method="POST">
+<div> <h1>MOC Account Request</h1></div>
+<div>Requested Username:<input type=text name='username' cols=150></text></div>
+<div><table> 
+      <tr><td colspan=2> Services: </td></tr>
+      <!-- these services should be database driven - hard coded for now -->
+      <tr><td> <input type=checkbox name=kaizen> </td><td>Kaizen</td></tr> 
+      <tr><td> <input type=checkbox name=kshift> </td><td>K-OpenShift</td></tr>
+      <tr><td> <input type=checkbox name=klambda> </td><td>K-Lambda</td></tr>
+    </table></div>
+<div>Reason for Account:<BR><textarea name="reason" rows="20" cols="80">{{printf "%s" .Body}}</textarea></div>
+<div>MOC Sponser:<input type=text name='sponser' cols=150></text></div>
+<div><input type="submit" value="Submit"></div>
+</form>
+</div>
